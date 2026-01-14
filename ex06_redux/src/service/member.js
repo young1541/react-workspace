@@ -3,7 +3,8 @@ let data_set = [
     {id:"bbb", pwd:"bbb", name:"김개똥", addr : "개똥별"},
     {id:"ccc", pwd:"ccc", name:"고길동", addr : "마포구"},
 ]
-export const getList = () => data_set;
+//export const getList = () => data_set;
+export const getList = () => fetch("http://localhost:4000/mem");
 export const register = ( user ) => {
     data_set = data_set.concat(user);
     return 1; //회원 가입 성공
